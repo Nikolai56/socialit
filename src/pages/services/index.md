@@ -1,18 +1,19 @@
 ---
-templateKey: 'services-page'
-path: /services
+templateKey: services-page
 title: About our services
 services:
-  - image: /img/coffee.png
-    title: Elisabeth Kaurismäki
+  - image: /img/services1.jpg
     text: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
+      Мы специализируемся на разработке функционально сложных, интеграционных и
+      высоконагруженных проектов и имеем большой опыт создания back-office
+      приложений, b2b и корпоративныхпорталов, интегрированных с внутренними
+      учетными системами.
+    title: 'РАЗРАБОТКА ИНТЕРНЕТ-САЙТОВ: ОТ ЛЕНДИНГ-ПЕЙДЖ ДО ИНТЕРНЕТ-МАГАЗИНА'
   - image: /img/coffee.png
-    title: Philipp Trommler
     text: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
+    title: Philipp Trommler
 ---
 ### Shade-grown coffee
 Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
