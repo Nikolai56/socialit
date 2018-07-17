@@ -1,0 +1,195 @@
+.menu_toggle,
+.menu_toggle2 {
+    display: none;
+}
+
+@media screen and (max-width:1150px) {
+    .nav2 li {
+        font-size: 1.7vw;
+    }
+}
+
+@media screen and (min-width:1080px) {
+    .nav1 .active {
+        color: #ff4d4d;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    /*-------------------nav1-----------------------*/
+    .nav1 .active:after {
+        content: url(../img/arrow-left2.png);
+        position: relative;
+        left: 15px;
+    }
+    .menu_list li,
+    .menu_toggle {
+        display: block;
+    }
+    .menu_list li {
+        border-top: 1px solid #454242;
+        margin-right: 0;
+        width: 98%;
+        padding-left: 5px;
+        -webkit-transition: 0.5s all ease-in-out;
+        -moz-transition: 0.5s all ease-in-out;
+        -o-transition: 0.5s all ease-in-out;
+        transition: 0.5s all ease-in-out;
+    }
+    .menu_list li:nth-last-of-type(1) {
+        border-bottom: 1px solid #454242;
+    }
+    .menu_list {
+        padding-bottom: 12px;
+        display: none;
+    }
+    .menu_list li:hover {
+        background-color: #fff;
+        padding-left: 35px;
+    }
+    .menu_list li a:hover {
+        color: #454242;
+    }
+    .nav2 li a {
+        padding: 12px 20px;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .wrapper-hf {
+        width: 56%;
+    }
+    html {
+        font-size: 8.5px;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .wrapper-hf {
+        width: 61%;
+    }
+}
+
+@media screen and (max-width:729px) {
+    .news,
+    .services {
+        padding: 20px 0;
+    }
+    .news a p {
+        margin: 20px 0 5px;
+    }
+    .news img,
+    .services img {
+        margin: 0 auto 20px;
+        float: none;
+    }
+}
+
+@media screen and (max-width:725px) {
+    /*-------------------nav2-----------------------*/
+    .nav2 {
+        margin-top: 0;
+    }
+    .menu_list2 {
+        display: none;
+    }
+    .menu_list2 li,
+    .menu_toggle2 {
+        display: block;
+    }
+    .menu_list2 li {
+        padding-bottom: 12px;
+        display: none;
+        font-size: 1.8rem;
+        text-align: left;
+        padding-bottom: 0;
+    }
+    .menu_list2 li a {
+        padding: 15px 0;
+        border-right: 0;
+        border-top: 1px solid #f6f4f4;
+    }
+    .menu_list2 li a:hover {
+        color: #fff;
+        background-color: #4f4f51;
+    }
+    .nav2 li a {
+        padding-left: 10px !important;
+    }
+    .nav1 .active:after {
+        content: url(../img/arrow-left2.png);
+        position: relative;
+        left: 15px;
+    }
+    .menu_list2 li,
+    .menu_toggle2 {
+        display: block;
+    }
+    /*-------------------contacts-----------------------*/
+    .contacts .col-md-6 {
+        float: none;
+        width: 80%;
+        margin: 0 auto 20px !important;
+    }
+    .contacts p {
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+    .contacts p:nth-last-of-type(1) {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .clients img {
+        margin: 65px auto 0;
+        display: block;
+    }
+}
+
+@media screen and (max-width:680px) {
+    /*-------------------header, footer-----------------------*/
+    .logo {
+        margin: 0 auto;
+    }
+    header,
+    footer {
+        text-align: center;
+    }
+    .wrapper-hf,
+    header .container .col-md-3,
+    footer .container .col-md-3 {
+        padding: 5px 0 16px;
+        width: 100%;
+        float: none;
+    }
+    .wrapper-hf .col-md-3:first-child {
+        border: none !important;
+    }
+    .wrapper-hf .col-md-3:last-child {
+        text-align: center;
+    }
+    .nbsp {
+        margin-right: 0;
+    }
+    .contacts input {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /*-------------------nav1-----------------------*/
+    .yellow-button a {
+        padding: 11px 15px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .news img,
+    .services img {
+        width: 90%;
+        display: block;
+    }
+    .portfolio img {
+        width: 47%;
+    }
+}

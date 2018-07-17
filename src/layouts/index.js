@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import Navbar from '../components/Navbar'
-import './all.sass'
+import './all.sass';
+import './css/reset.css'
+import './css/stylesheet.css';
+import './css/modal.css';
+import './css/media.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
