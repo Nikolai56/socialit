@@ -1,6 +1,6 @@
 ---
 templateKey: services-page
-title: About our services
+title: Наши услуги
 services:
   - image: /img/services1.jpg
     text: >-
@@ -54,4 +54,4 @@ services:
       учетными системами.
     title: 'Печать полиграфии: от визиток до каталогов.'
 ---
-Here you can add simple content
+Мы предлагаем вам большой выбор услуг
