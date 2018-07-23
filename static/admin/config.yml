@@ -20,7 +20,6 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    create: true
     files:
       - file: "src/pages/about/index.md"
         label: "About"

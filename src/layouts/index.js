@@ -14,7 +14,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Header />
     <Navbar />
-    <div>{children()}</div>
+    {children()}
   </div>
 )
 
