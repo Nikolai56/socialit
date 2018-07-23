@@ -9,6 +9,7 @@ export const ServicesPageTemplate = ({ title, content, contentComponent, service
             <div className="container">
                 <h1>{title}</h1>
                 <PageContent className="content" content={content} />
+                <br />
                 {services.map(item => (
                     <div className="col-md-12 clearfix" key={item.image}>
                         <img src={item.image} alt={item.title} />

@@ -12,11 +12,11 @@ const Navbar = () => (
                 Меню
             </div>
             <ul className="menu_list">
-                <li><Link to="/">Главная</Link></li>
-                <li><Link to="/about">Новости</Link></li>
-                <li><Link to="/services">Услуги</Link></li>
-                <li><Link to="/products">Работы</Link></li>
-                <li><Link to="/products">Контакты</Link></li>
+                <li><Link exact activeClassName="active" to="/">Главная</Link></li>
+                <li><Link exact activeClassName="active" to="/about">Новости</Link></li>
+                <li><Link exact activeClassName="active" to="/services/">Услуги</Link></li>
+                <li><Link exact activeClassName="active" to="/products">Работы</Link></li>
+                <li><Link exact activeClassName="active" to="/products">Контакты</Link></li>
             </ul>
         </div>
     </nav>
