@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './all.sass';
 import './css/reset.css'
-import './css/stylesheet.css';
+import './css/stylesheet.scss';
 import './css/modal.css';
 import './css/media.css';
 

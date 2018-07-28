@@ -544,9 +544,18 @@ main h2 {
     margin-bottom: 130px;
 }
 
-.project > .container > p {
-    margin: 40px 0 60px;
-    line-height: 25px;
+//.project > .container > p {
+//    margin: 40px 0 60px;
+//    line-height: 25px;
+//}
+
+.project {
+    >.container {
+        p {
+            margin: 40px 0 60px;
+            line-height: 25px;
+        }
+    }
 }
 
 .dib p {
