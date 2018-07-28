@@ -4,11 +4,10 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import './all.sass';
-import './css/reset.css'
-import './css/stylesheet.scss';
-import './css/modal.css';
-import './css/media.css';
+import './reset.css'
+import './stylesheet.scss';
+import './modal.css';
+import './media.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>

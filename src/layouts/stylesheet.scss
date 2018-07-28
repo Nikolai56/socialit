@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Helve';
-    src: url('../fonts/Helve/Helve.otf');
+    src: url('./fonts/Helve/Helve.otf');
     font-style: normal;
     font-weight: normal;
 }
@@ -521,7 +521,7 @@ main h2 {
 }
 
 .handbg {
-    background: url(../img/handbg.jpg)no-repeat center;
+    background: url(./img/handbg.jpg)no-repeat center;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;

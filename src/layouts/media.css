@@ -18,7 +18,7 @@
 @media screen and (max-width:1080px) {
     /*-------------------nav1-----------------------*/
     .nav1 .active:after {
-        content: url(../img/arrow-left2.png);
+        content: url(./img/arrow-left2.png);
         position: relative;
         left: 15px;
     }
@@ -117,7 +117,7 @@
         padding-left: 10px !important;
     }
     .nav1 .active:after {
-        content: url(../img/arrow-left2.png);
+        content: url(./img/arrow-left2.png);
         position: relative;
         left: 15px;
     }
