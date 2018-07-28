@@ -506,12 +506,6 @@ main h2 {
 
 /*----------------artway----------------*/
 
-.project h1 {
-    margin: 40px 0 20px;
-    font-size: 3rem;
-    color: black;
-}
-
 .project p {
     font-size: 1.7rem;
     color: black;
@@ -550,6 +544,13 @@ main h2 {
 //}
 
 .project {
+    h1 {
+        margin: 40px 0 20px;
+        font-size: 3rem;
+        color: black;
+        text-transform: none;
+        font-weight: normal;
+    }
     >.container {
         p {
             margin: 40px 0 60px;
