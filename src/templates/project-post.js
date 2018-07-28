@@ -14,7 +14,7 @@ export const ProjectPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
     return (
-        <main className="project">
+        <section className="project">
             {helmet || ''}
             <div className="container">
                 <h1>{title}</h1>
@@ -40,7 +40,7 @@ export const ProjectPostTemplate = ({
                     ))}
                 </div>
             </div> : null}
-        </main>
+        </section>
     )
 };
 
