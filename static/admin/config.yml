@@ -32,11 +32,8 @@ collections:
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Authors",
         name: "authors",
-        widget: "object",
-        fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Text", name: "text", widget: "text"}
-      }
+        widget: "list",
+        fields: [{label: "Title", name: "title", widget: "string"}, {label: "Text", name: "text", widget: "text"}]}
 
   - name: "pages"
     label: "Pages"

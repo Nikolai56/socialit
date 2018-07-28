@@ -30,24 +30,16 @@ export const ProjectPostTemplate = ({
             <div className="container">
                 <PostContent content={content}/>
             </div>
-            <div className="grey">
+            {authors ? <div className="grey">
                 <div className="container dib">
-                    {authors ? authors.map(item => (
+                    {authors.map(item => (
                         <p key={item.title}>
                             <span>{item.title}</span>
                             <br />{item.text}
                         </p>
-                    )) : null}
-                    <p>
-                        <span>Дизайнер:</span>
-                        <br />Андрей Фуфачев
-                    </p>
-                    <p>
-                        <span>Дизайнер:</span>
-                        <br />Станислав Авдеев
-                    </p>
+                    ))}
                 </div>
-            </div>
+            </div> : null}
         </main>
     )
 };
