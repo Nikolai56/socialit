@@ -87,8 +87,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-// authors {
-//     title
-//     text
-// }
