@@ -9,6 +9,7 @@ export const ProjectPostTemplate = ({
   title,
   date,
   helmet,
+  image,
 }) => {
   const PostContent = contentComponent || Content;
     return (
@@ -17,19 +18,18 @@ export const ProjectPostTemplate = ({
             <div className="container">
                 <h1>{title}</h1>
             </div>
-
             <div className="grey">
                 <div className="container">
                     <p>{description} <span className="tr">{date}</span></p>
                 </div>
             </div>
             <div className="handbg">
-                <img src="img/art.png" alt="" />
+                <img src={image} alt={title} />
             </div>
             <div className="container">
                 <PostContent content={content}/>
-                <img src="img/art2.png" alt="" />
-                    <img src="img/art-gr.png" alt="" />
+                <img src={image} alt={title} />
+                <img src="img/art-gr.png" alt="" />
             </div>
             <div className="grey">
                 <div className="container dib">
@@ -45,7 +45,7 @@ export const ProjectPostTemplate = ({
             </div>
         </main>
     )
-}
+};
 
 // const old = (
 //     <section className="section">
@@ -75,6 +75,7 @@ export default props => {
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
       date={post.frontmatter.date}
+      image={post.frontmatter.image}
     />
   )
 }
@@ -88,7 +89,8 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         title
         description
+        image
       }
     }
   }
-`
+`;
