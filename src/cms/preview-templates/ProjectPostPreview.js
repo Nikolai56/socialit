@@ -10,7 +10,11 @@ const ProjectPostPreview = ({ entry, widgetFor }) => {
             description={entry.getIn(['data', 'description'])}
             title={entry.getIn(['data', 'title'])}
             image={entry.getIn(['data', 'image'])}
-            authors={authors}
+            // authors={authors}
+            authors={{
+                title: entry.getIn(['data', 'authors', 'title']),
+                text: entry.getIn(['data', 'authors', 'text']),
+            }}
         />
     )
 };
