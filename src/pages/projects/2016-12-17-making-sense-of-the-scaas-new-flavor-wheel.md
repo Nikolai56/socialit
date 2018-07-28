@@ -3,6 +3,15 @@ templateKey: project-post
 title: Making sense of the SCAA’s new Flavor Wheel
 date: 2016-12-17T15:04:10.000Z
 description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+image: /img/art.png
+authors:
+  - image: /img/services1.jpg
+    text: >-
+      Мы специализируемся на разработке функционально сложных, интеграционных и
+      высоконагруженных проектов и имеем большой опыт создания back-office
+      приложений, b2b и корпоративныхпорталов, интегрированных с внутренними
+      учетными системами.
+    title: 'Разработка интернет-сайтов: от лендинг-пейдж до интернет-магазина'
 ---
 
 ![flavor wheel](/img/flavor_wheel.jpg)

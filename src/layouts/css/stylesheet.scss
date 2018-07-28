@@ -559,15 +559,15 @@ main h2 {
     }
 }
 
-.dib p {
-    display: inline-block;
-    line-height: 25px;
-}
-
-.dib p:first-child {
-    margin-right: 100px;
-}
-
-.dib p span {
-    font-weight: bold;
+.dib {
+    p {
+        display: inline-block;
+        line-height: 25px;
+        span {
+            font-weight: bold;
+        }
+        + p {
+            margin-left: 100px;
+        }
+    }
 }

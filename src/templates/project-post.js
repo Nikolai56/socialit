@@ -10,6 +10,7 @@ export const ProjectPostTemplate = ({
   date,
   helmet,
   image,
+  authors,
 }) => {
   const PostContent = contentComponent || Content;
     return (
@@ -23,16 +24,20 @@ export const ProjectPostTemplate = ({
                     <p>{description} <span className="tr">{date}</span></p>
                 </div>
             </div>
-            <div className="handbg">
+            {image ? <div className="handbg">
                 <img src={image} alt={title} />
-            </div>
+            </div> : null}
             <div className="container">
                 <PostContent content={content}/>
-                <img src={image} alt={title} />
-                <img src="img/art-gr.png" alt="" />
             </div>
             <div className="grey">
                 <div className="container dib">
+                    {authors ? authors.map(item => (
+                        <p key={item.title}>
+                            <span>{item.title}</span>
+                            <br />{item.text}
+                        </p>
+                    )) : null}
                     <p>
                         <span>Дизайнер:</span>
                         <br />Андрей Фуфачев
@@ -47,25 +52,8 @@ export const ProjectPostTemplate = ({
     )
 };
 
-// const old = (
-//     <section className="section">
-//         {helmet || ''}
-//         <div className="container content">
-//             <div className="columns">
-//                 <div className="column is-10 is-offset-1">
-//                     <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-//                         {title}
-//                     </h1>
-//                     <p>{description}</p>
-//                     <PostContent content={content}/>
-//                 </div>
-//             </div>
-//         </div>
-//     </section>
-// )
-
 export default props => {
-  const { markdownRemark: post } = props.data
+  const { markdownRemark: post } = props.data;
 
   return (
     <ProjectPostTemplate
@@ -76,6 +64,7 @@ export default props => {
       title={post.frontmatter.title}
       date={post.frontmatter.date}
       image={post.frontmatter.image}
+      authors={post.frontmatter.authors}
     />
   )
 }
@@ -90,7 +79,16 @@ export const pageQuery = graphql`
         title
         description
         image
+        authors {
+            title
+            text
+        }
       }
     }
   }
 `;
+
+// authors {
+//     title
+//     text
+// }
