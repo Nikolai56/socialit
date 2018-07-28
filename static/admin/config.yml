@@ -30,14 +30,14 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Image", name: "image", widget: "image"}
     - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Authors"
-        name: "authors"
-        widget: "object"
+    - {label: "Authors",
+        name: "authors",
+        widget: "object",
         fields:
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Text", name: "text", widget: "text"}
       }
-
+    
   - name: "pages"
     label: "Pages"
     files:
