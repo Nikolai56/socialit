@@ -28,7 +28,7 @@ export default class IndexPage extends React.Component {
                         {posts
                             .filter(post => post.node.frontmatter.templateKey === 'project-post')
                             .map(({ node: post }) => (
-                                <Link key={post.id} to={post.fields.slug}>
+                                <Link key={post.id} to={post.fields.slug} className={post.frontmatter.tag}>
                                     <img src={post.frontmatter.image} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
                                     {/*<p>{post.excerpt}</p>*/}
                                 </Link>
@@ -51,6 +51,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            tag
             title
             templateKey
             date(formatString: "DD.MM.YYYY")

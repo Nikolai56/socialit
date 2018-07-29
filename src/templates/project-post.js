@@ -68,6 +68,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "DD.MM.YYYY")
+        tag
         title
         description
         image
