@@ -82,6 +82,17 @@ body {
     clear: both;
 }
 
+.container-fluid {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.container-fluid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .clearfix:after {
     content: '';
     display: block;
