@@ -1,13 +1,16 @@
-import React from 'react'
-import logo from '../img/logo.png'
+import React from 'react';
+import logo from '../img/logo.png';
+import Link from 'gatsby-link';
 
 const Header = () => (
     <header>
         <div className="container">
             <div className="col-md-3">
-                <div className="logo">
-                    <img src={logo} alt="" />
-                </div>
+                <Link to="/">
+                    <div className="logo">
+                        <img src={logo} alt="Socialit design" />
+                    </div>
+                </Link>
             </div>
             <div className="wrapper-hf">
                 <div className="col-md-3">
@@ -21,6 +24,6 @@ const Header = () => (
             </div>
         </div>
     </header>
-)
+);
 
-export default Header
+export default Header;
