@@ -33,7 +33,7 @@ export const ProjectPostTemplate = ({
             {authors ? <div className="grey">
                 <div className="container dib">
                     {authors.map(item => (
-                        <p key={item.title}>
+                        <p key={`${item.title}-${item.text}`}>
                             <span>{item.title}</span>
                             <br />{item.text}
                         </p>
