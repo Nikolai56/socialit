@@ -16,6 +16,7 @@ const Navbar = () => (
                 {/*<li><Link exact activeClassName="active" to="/about/">Новости</Link></li>*/}
                 <li><Link exact activeClassName="active" to="/services/">Услуги</Link></li>
                 <li><Link exact activeClassName="active" to="/">Работы</Link></li>
+                <li><Link exact activeClassName="active" to="/contacts/">Контакты</Link></li>
                 {/*<li><Link exact activeClassName="active" to="/products/">Контакты</Link></li>*/}
             </ul>
         </div>
