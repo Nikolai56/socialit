@@ -8,6 +8,7 @@ const ProjectPostPreview = ({ entry, widgetFor }) => {
         <ProjectPostTemplate
             content={widgetFor('body')}
             description={entry.getIn(['data', 'description'])}
+            tag={entry.getIn(['tag', 'tag'])}
             title={entry.getIn(['data', 'title'])}
             image={entry.getIn(['data', 'image'])}
             authors={authors}
