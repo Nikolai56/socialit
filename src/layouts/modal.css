@@ -1,88 +1,5 @@
-.modal-open {
+.ReactModal__Body--open {
     overflow: hidden;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1050;
-    display: none;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
-    outline: 0;
-}
-
-.modal.fade .modal-dialog {
-    -webkit-transition: -webkit-transform .3s ease-out;
-    -o-transition: -o-transform .3s ease-out;
-    transition: -webkit-transform .3s ease-out;
-    -moz-transition: transform .3s ease-out, -moz-transform .3s ease-out;
-    -o-transition: transform .3s ease-out, -o-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out, -moz-transform .3s ease-out, -o-transform .3s ease-out;
-    -webkit-transform: translate(0, -25%);
-    -ms-transform: translate(0, -25%);
-    -o-transform: translate(0, -25%);
-    -moz-transform: translate(0, -25%);
-    transform: translate(0, -25%);
-}
-
-.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    transform: translate(0, 0);
-}
-
-.modal-open .modal {
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.modal-dialog {
-    position: relative;
-    width: auto;
-    margin: 10px;
-}
-
-.modal-content {
-    position: relative;
-    background-color: #fff;
-    -moz-background-clip: padding-box;
-    -o-background-clip: padding-box;
-    background-clip: padding-box;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    outline: 0;
-    max-width: 270px;
-    text-align: center;
-    margin: 50px auto;
-    color: #717171;
-}
-
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    background-color: #000;
-}
-
-.modal-backdrop.fade {
-    filter: alpha(opacity=0);
-    opacity: 0;
-}
-
-.modal-backdrop.in {
-    filter: alpha(opacity=50);
-    opacity: .5;
 }
 
 .modal-header h3 {
@@ -90,9 +7,14 @@
 }
 
 .modal-body,
-.modal-footer,
 .modal-header {
     position: relative;
+    text-align: center;
+}
+
+.modal-footer {
+    position: relative;
+    text-align: right;
 }
 
 .modal-content .wrapper {
@@ -126,9 +48,7 @@ input.btn {
     color: #fff;
 }
 
-.modal-footer {
-    text-align: right;
-}
+
 
 .modal-footer button {
     cursor: pointer;
@@ -145,4 +65,18 @@ input.btn {
     width: 50px;
     height: 50px;
     overflow: scroll;
+}
+
+/*----------------------------------------*/
+.ReactModal__Content {
+    opacity: 0;
+}
+
+.ReactModal__Content--after-open {
+    opacity: 1;
+    transition: opacity 150ms;
+}
+
+.ReactModal__Content--before-close {
+    opacity: 0;
 }

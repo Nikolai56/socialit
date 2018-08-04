@@ -1,13 +1,11 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+import Modal from './Modal';
 
 const Navbar = () => (
     <nav className="nav1 clearfix">
         <div className="container">
-            <div className="yellow-button">
-                <a data-toggle="modal" data-target="#myModal" href="">Закажите обратный звонок</a>
-            </div>
-
+            <Modal />
             <div className="menu_toggle">
                 Меню
             </div>
