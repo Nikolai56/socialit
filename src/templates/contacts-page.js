@@ -13,7 +13,7 @@ export const ContactsPageTemplate = ({ title, content, contentComponent }) => {
                 <h1>{title}</h1>
                 <br />
                 <div className="col-md-6">
-                    <form name="contact" method="POST" netlify>
+                    <form name="contact" method="POST" data-netlify="true">
                         <input type="text" name='name' placeholder="Имя" required />
                         <input type="email" name='email' placeholder="E-mail" required />
                         <textarea name="comment" rows="12" placeholder="Комментарий" />
