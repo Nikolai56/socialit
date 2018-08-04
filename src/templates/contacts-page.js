@@ -13,13 +13,13 @@ export const ContactsPageTemplate = ({ title, content, contentComponent }) => {
                 <h1>{title}</h1>
                 <br />
                 <div className="col-md-6">
-                    <form name="contact" method="POST" data-netlify={true}>
+                    <form name="contact" method="POST" data-netlify>
                         <input type="text" name='name' placeholder="Имя" required />
                         <input type="email" name='email' placeholder="E-mail" required />
                         <textarea name="comment" rows="12" placeholder="Комментарий" />
-                        <div data-netlify-recaptcha={true} />
+                        <div data-netlify-recaptcha />
                         <br />
-                        <input type="submit" value=' Отправить' />
+                        <button type="submit">Отправить</button>
                     </form>
                 </div>
                 <PageContent className="col-md-6" content={content} />
