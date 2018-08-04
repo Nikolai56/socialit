@@ -14,8 +14,9 @@ export const ContactsPageTemplate = ({ title, content, contentComponent }) => {
                 <br />
                 <div className="col-md-6">
                     <form name="contact" method="POST" data-netlify>
-                        <input type="text" name='name' placeholder="Имя" required />
-                        <input type="email" name='email' placeholder="E-mail" required />
+                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="text" name="name" placeholder="Имя" required />
+                        <input type="email" name="email" placeholder="E-mail" required />
                         <textarea name="comment" rows="12" placeholder="Комментарий" />
                         <div data-netlify-recaptcha />
                         <br />
