@@ -48,13 +48,13 @@ class Modal extends React.PureComponent {
                         </div>
 
                         <div className="modal-body">
-                            <form name="modal" method="POST" data-netlify netlify-honeypot="bot-field">
+                            <form name="modal" method="POST" data-netlify netlify-honeypot="modal-bot-field">
                                 <input type="text" name="name" placeholder="Имя" required />
                                 <input type="tel" name="tel" placeholder="Телефон" required />
                                 <textarea name="comment" rows="4" placeholder="Комментарий" />
 
                                 <input type="hidden" name="form-name" value="modal" />
-                                <label className="hidden">Don’t fill this out if you're human: <input name="bot-field" /></label>
+                                <label className="hidden">Don’t fill this out if you're human: <input name="modal-bot-field" /></label>
 
                                 <input className="btn" type="submit" value='Заказать звонок' />
 
