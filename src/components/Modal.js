@@ -12,7 +12,10 @@ class Modal extends React.PureComponent {
         super();
         this.state = {
             showModal: false,
-            name: "", email: "", message: "",
+            name: '',
+            email: '',
+            message: '',
+            bot: '',
         };
     }
 
@@ -35,7 +38,10 @@ class Modal extends React.PureComponent {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "modal", ...this.state })
         })
-            .then(() => alert("Success!"))
+            .then(() => {
+                alert("Заявка отправлена!");
+                this.handleCloseModal();
+            })
             .catch(error => alert(error));
 
         e.preventDefault();
@@ -44,7 +50,7 @@ class Modal extends React.PureComponent {
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
     render () {
-        const { name, tel, comment } = this.state;
+        const { name, tel, comment, bot } = this.state;
         return (
             <div className="yellow-button">
                 <a href="#" onClick={this.handleOpenModal}>Закажите обратный звонок</a>
@@ -68,23 +74,20 @@ class Modal extends React.PureComponent {
                         <div className="modal-header">
                             <h3>Закажите обратный звонок и мы вам перезвоним.</h3>
                         </div>
-
                         <div className="modal-body">
-                            <form onSubmit={this.handleSubmit} netlify-honeypot="modal-bot-field">
+                            <form onSubmit={this.handleSubmit} netlify-honeypot="bot">
                                 <input type="text" name="name" placeholder="Имя" value={name} onChange={this.handleChange} required />
                                 <input type="tel" name="tel" placeholder="Телефон" value={tel} onChange={this.handleChange} required />
                                 <textarea name="comment" rows="4" placeholder="Комментарий" value={comment} onChange={this.handleChange} />
-
-                                {/*<input type="hidden" name="form-name" value="modal" />*/}
-                                <label className="hidden">Don’t fill this out if you're human: <input name="modal-bot-field" /></label>
+                                <label className="hidden">Don’t fill this out if you're human:
+                                    <input name="bot" value={bot} onChange={this.handleChange} />
+                                </label>
                                 <button className="btn" type="submit">Заказать звонок</button>
                             </form>
                         </div>
-
                         <div className="modal-footer">
                             <button onClick={this.handleCloseModal}>Закрыть</button>
                         </div>
-
                     </div>
                 </ReactModal>
                 {/*<form name="modal" method="POST" data-netlify netlify-honeypot="modal-bot-field">*/}
