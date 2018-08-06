@@ -36,7 +36,8 @@ class Modal extends React.PureComponent {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "modal", "netlify-honeypot": "bot", ...this.state })
+            body: encode({ "form-name": "modal", "honeypot": "bot",
+                "data-netlify-honeypot": "bot", "form-data-netlify-honeypot": "bot", ...this.state })
         })
             .then(() => {
                 alert("Заявка отправлена!");
