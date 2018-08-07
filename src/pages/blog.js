@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { NavLink } from 'react-router-dom';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -21,9 +21,9 @@ export default class IndexPage extends React.Component {
                 key={post.id}
               >
                 <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
+                  <NavLink className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
-                  </Link>
+                  </NavLink>
                   <span> &bull; </span>
                   <small>{post.frontmatter.date}</small>
                 </p>
@@ -31,9 +31,9 @@ export default class IndexPage extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button is-small" to={post.fields.slug}>
+                  <NavLink className="button is-small" to={post.fields.slug}>
                     Keep Reading →
-                  </Link>
+                  </NavLink>
                 </p>
               </div>
             ))}

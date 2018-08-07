@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { NavLink } from 'react-router-dom';
 
 export default class IndexPage extends React.Component {
     constructor(props) {
@@ -45,10 +45,10 @@ export default class IndexPage extends React.Component {
                             .filter(post => post.node.frontmatter.templateKey === 'project-post')
                             .filter(post => post.node.frontmatter.tag.includes(this.state.tag))
                             .map(({ node: post }) => (
-                                <Link key={post.id} to={post.fields.slug} className={`project-link ${post.frontmatter.tag}`}>
+                                <NavLink key={post.id} to={post.fields.slug} className={`project-link ${post.frontmatter.tag}`}>
                                     <img src={post.frontmatter.image} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
                                     {/*<p>{post.excerpt}</p>*/}
-                                </Link>
+                                </NavLink>
                             ))}
                     </div>
                 </section>

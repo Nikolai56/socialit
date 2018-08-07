@@ -1,16 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../img/logo.png';
-import Link from 'gatsby-link';
 
 const Header = () => (
     <header>
         <div className="container">
             <div className="col-md-3">
-                <Link to="/">
+                <NavLink to="/">
                     <div className="logo">
                         <img src={logo} alt="Socialit design" />
                     </div>
-                </Link>
+                </NavLink>
             </div>
             <div className="wrapper-hf">
                 <div className="col-md-3">

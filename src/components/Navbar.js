@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { NavLink } from 'react-router-dom';
 import Modal from './Modal';
 
 const Navbar = () => {
@@ -26,9 +26,9 @@ const Navbar = () => {
                 <ul className="menu_list">
                     {/*<li><Link exact activeClassName="active" to="/">Главная</Link></li>*/}
                     {/*<li><Link exact activeClassName="active" to="/about/">Новости</Link></li>*/}
-                    <li><Link onClick={handleCloseMenu} exact activeClassName="active" to="/services/">Услуги</Link></li>
-                    <li><Link onClick={handleCloseMenu} exact activeClassName="active" to="/">Работы</Link></li>
-                    <li><Link onClick={handleCloseMenu} exact activeClassName="active" to="/contacts/">Контакты</Link></li>
+                    <li><NavLink onClick={handleCloseMenu} exact activeClassName="active" to="/services/">Услуги</NavLink></li>
+                    <li><NavLink onClick={handleCloseMenu} exact activeClassName="active" to="/">Работы</NavLink></li>
+                    <li><NavLink onClick={handleCloseMenu} exact activeClassName="active" to="/contacts/">Контакты</NavLink></li>
                     {/*<li><Link exact activeClassName="active" to="/products/">Контакты</Link></li>*/}
                 </ul>
             </div>
