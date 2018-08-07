@@ -220,6 +220,10 @@ footer p {
     overflow: hidden;
 }
 
+.menu_list.open {
+    display: block;
+}
+
 .menu_list li {
     display: inline-block;
     font-size: 1.7rem;
