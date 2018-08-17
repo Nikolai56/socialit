@@ -43,6 +43,9 @@
         padding-bottom: 12px;
         display: none;
     }
+    .menu_list.menu_list-mobile {
+        display: block;
+    }
     .menu_list li:hover {
         background-color: #fff;
         padding-left: 35px;
@@ -92,6 +95,9 @@
     }
     .menu_list2 {
         display: none;
+    }
+    .menu_list2-mobile {
+        display: block;
     }
     .menu_list2 li,
     .menu_toggle2 {

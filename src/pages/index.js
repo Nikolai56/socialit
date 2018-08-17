@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Collapse } from 'react-collapse';
 
 export default class IndexPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             tag: 'всё',
+            isMenuOpen: false,
         };
     }
 
@@ -16,6 +18,15 @@ export default class IndexPage extends React.Component {
         activeEls.forEach(el => el.classList.remove('active'));
         e.target.parentElement.classList.add('active');
         this.setState({ tag });
+        this.handleCloseMenu();
+    };
+
+    handleToggleMenu = () => {
+        this.setState({ isMenuOpen: !this.state.isMenuOpen });
+    };
+
+    handleCloseMenu = () => {
+        this.setState({ isMenuOpen: false });
     };
 
     render() {
@@ -28,7 +39,7 @@ export default class IndexPage extends React.Component {
                     <div className="container">
                         <h1 className="text-center">Работы по категориям:</h1>
                         <br />
-                        <div className="menu_toggle2">Категории</div>
+                        <div className="menu_toggle2" onClick={this.handleToggleMenu}>Категории</div>
                         <ul className="menu_list2">
                             <li><a href="#" onClick={(e) => this.handleChangeTag(e,'всё')}>Всё </a></li>
                             <li><a href="#" onClick={(e) => this.handleChangeTag(e,'сайты')}>Сайты </a></li>
@@ -37,6 +48,16 @@ export default class IndexPage extends React.Component {
                             <li><a href="#" onClick={(e) => this.handleChangeTag(e,'логотип и фирменный стиль')}>Логотип и фирменный стиль </a></li>
                             <li><a href="#" onClick={(e) => this.handleChangeTag(e,'иллюстрации')}>Иллюстрации </a></li>
                         </ul>
+                        <Collapse isOpened={this.state.isMenuOpen}>
+                            <ul className="menu_list2 menu_list2-mobile">
+                                <li><a href="#" onClick={(e) => this.handleChangeTag(e,'всё')}>Всё </a></li>
+                                <li><a href="#" onClick={(e) => this.handleChangeTag(e,'сайты')}>Сайты </a></li>
+                                <li><a href="#" onClick={(e) => this.handleChangeTag(e,'полиграфия')}>Полиграфия </a></li>
+                                <li><a href="#" onClick={(e) => this.handleChangeTag(e,'наружная реклама')}>Наружная реклама </a></li>
+                                <li><a href="#" onClick={(e) => this.handleChangeTag(e,'логотип и фирменный стиль')}>Логотип и фирменный стиль </a></li>
+                                <li><a href="#" onClick={(e) => this.handleChangeTag(e,'иллюстрации')}>Иллюстрации </a></li>
+                            </ul>
+                        </Collapse>
                     </div>
                 </nav>
                 <section className="portfolio">
