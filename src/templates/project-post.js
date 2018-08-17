@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Content, { HTMLContent } from '../components/Content'
+import Seo from '../components/Seo'
 
 export const ProjectPostTemplate = ({
   content,
@@ -15,7 +16,13 @@ export const ProjectPostTemplate = ({
   const PostContent = contentComponent || Content;
     return (
         <section className="project">
-            {helmet || ''}
+            <Seo
+                title={title}
+                // meta_title={meta_title}
+                // meta_desc={meta_desc}
+                // cover={cover}
+                // slug={slug}
+            />
             <div className="container">
                 <h1>{title}</h1>
             </div>
@@ -58,6 +65,10 @@ export default props => {
       date={post.frontmatter.date}
       image={post.frontmatter.image}
       authors={post.frontmatter.authors}
+      // cover={post.frontmatter.cover}
+      // meta_title={post.frontmatter.meta_title}
+      // meta_desc={post.frontmatter.meta_description}
+      // slug={post.fields.slug}
     />
   )
 }
