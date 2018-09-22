@@ -40,7 +40,6 @@ export default class IndexPage extends React.Component {
                         <h1 className="text-center">Работы по категориям:</h1>
                         <br />
                         <div className="menu_toggle2" onClick={this.handleToggleMenu} style={{
-                            display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                         }}>

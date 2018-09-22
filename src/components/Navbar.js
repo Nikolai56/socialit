@@ -25,7 +25,6 @@ class Navbar extends React.Component {
                 <div className="container">
                     <Modal/>
                     <div className="menu_toggle" onClick={this.handleToggleMenu} style={{
-                        display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                     }}>

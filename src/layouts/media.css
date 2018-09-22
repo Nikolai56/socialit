@@ -24,7 +24,7 @@
     }
     .menu_list li,
     .menu_toggle {
-        display: block;
+        display: flex;
     }
     .menu_list li {
         border-top: 1px solid #454242;
@@ -99,10 +99,6 @@
     .menu_list2-mobile {
         display: block;
     }
-    .menu_list2 li,
-    .menu_toggle2 {
-        display: block;
-    }
     .menu_list2 li {
         padding-bottom: 12px;
         display: none;
@@ -129,7 +125,7 @@
     }
     .menu_list2 li,
     .menu_toggle2 {
-        display: block;
+        display: flex;
     }
     /*-------------------contacts-----------------------*/
     .contacts .col-md-6 {
