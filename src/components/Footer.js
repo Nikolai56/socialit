@@ -19,7 +19,7 @@ const Footer = () => (
                     <p className="nbsp">Бесплатный звонок по России </p>
                 </div>
             </div>
-            <p>© 2018 ООО «Socialit». Все права защищены.</p>
+            <p>© {new Date().getFullYear()} ООО «Socialit». Все права защищены.</p>
         </div>
     </footer>
 );
