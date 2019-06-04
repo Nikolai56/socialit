@@ -24,7 +24,6 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-post"}
-    - {label: "Tag", name: "tag", widget: "string"}
     - {label: "Tags",
         name: "tags",
         widget: "select",
