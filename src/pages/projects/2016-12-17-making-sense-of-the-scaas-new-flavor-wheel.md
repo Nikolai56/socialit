@@ -1,17 +1,19 @@
 ---
 templateKey: project-post
-tag: 'всё полиграфия'
-tags: 'всё'
+tag: всё полиграфия
+tags: полиграфия
 title: Making sense of the SCAA’s new Flavor Wheel
 date: 2016-12-17T15:04:10.000Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+description: >-
+  The Coffee Taster’s Flavor Wheel, the official resource used by coffee
+  tasters, has been revised for the first time this year.
 image: /img/advertising2.jpg
 imageInList: /img/advertising2.jpg
 authors:
-  - title: 'Дизайнер:'
-    text: Андрей Фуфачев
-  - title: 'Дизайнер:'
-    text: Станислав Авдеев
+  - text: Андрей Фуфачев
+    title: 'Дизайнер:'
+  - text: Станислав Авдеев
+    title: 'Дизайнер:'
 ---
 
 ![flavor wheel](/img/flavor_wheel.jpg)
