@@ -73,7 +73,7 @@ export default class IndexPage extends React.Component {
                             .filter(post => post.node.frontmatter.tag.includes(this.state.tag))
                             .map(({ node: post }) => (
                                 <NavLink key={post.id} to={post.fields.slug} className={`project-link ${post.frontmatter.tag}`}>
-                                    <img src={post.frontmatter.image} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
+                                    <img src={post.frontmatter.imageInList} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
                                     {/*<p>{post.excerpt}</p>*/}
                                 </NavLink>
                             ))}
@@ -99,7 +99,7 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "DD.MM.YYYY")
-            image
+            imageInList
           }
         }
       }
