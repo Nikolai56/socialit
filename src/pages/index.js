@@ -70,9 +70,9 @@ export default class IndexPage extends React.Component {
                     <div className="container-fluid">
                         {posts
                             .filter(post => post.node.frontmatter.templateKey === 'project-post')
-                            .filter(post => post.node.frontmatter.tag.includes(this.state.tag))
+                            .filter(post => post.node.frontmatter.tags.includes(this.state.tag))
                             .map(({ node: post }) => (
-                                <NavLink key={post.id} to={post.fields.slug} className={`project-link ${post.frontmatter.tag}`}>
+                                <NavLink key={post.id} to={post.fields.slug} className='project-link'>
                                     <img src={post.frontmatter.imageInList} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
                                     {/*<p>{post.excerpt}</p>*/}
                                 </NavLink>
@@ -95,7 +95,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            tag
+            tags
             title
             templateKey
             date(formatString: "DD.MM.YYYY")
