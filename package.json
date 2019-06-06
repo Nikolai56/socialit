@@ -1,6 +1,6 @@
 {
-  "name": "socialit-design",
-  "description": "Gatsby, and Netlify CMS project for Socialit design",
+  "name": "colorfast-design",
+  "description": "Gatsby, and Netlify CMS project for Colorfast design",
   "version": "1.1.0",
   "author": "Nikolai",
   "dependencies": {
@@ -29,9 +29,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
+    "start": "npm run dev",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"

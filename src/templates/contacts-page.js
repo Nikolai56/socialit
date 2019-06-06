@@ -33,9 +33,9 @@ export const ContactsPageTemplate = ({ title, content, contentComponent }) => {
                                 coordinates: mapState.center,
                             }}
                             properties={{
-                                hintContent: 'Центральный офис SOCIALIT в Москве',
+                                hintContent: 'Центральный офис COLORFAST в Москве',
                                 balloonContentBody: ['<address>',
-                                    '<strong>Центральный офис SOCIALIT в Москве</strong>',
+                                    '<strong>Центральный офис COLORFAST в Москве</strong>',
                                     '<br/>',
                                     'Адрес: 117218, Москва, ул.Большая Черёмушкинская, д.25, стр. 97',
                                     '</address>'].join(''),

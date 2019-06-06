@@ -11,7 +11,7 @@ import './media.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Главная | SOCIALIT design" />
+    <Helmet title="Главная | COLORFAST design" />
     <Header />
     <Navbar />
     {children()}

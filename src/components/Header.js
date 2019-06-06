@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../img/logo.png';
+import logo from '../img/logo.svg';
 
 const Header = () => (
     <header>
@@ -8,7 +8,7 @@ const Header = () => (
             <div className="col-md-3">
                 <NavLink to="/">
                     <div className="logo">
-                        <img src={logo} alt="Socialit design" />
+                        <img src={logo} alt="Colorfast design" />
                     </div>
                 </NavLink>
             </div>

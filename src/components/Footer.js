@@ -1,12 +1,12 @@
 import React from 'react'
-import Logobot from '../img/logobot2.png';
+import logoFoot from '../img/logo-footer.svg';
 
 const Footer = () => (
     <footer>
         <div className="container">
             <div className="col-md-3">
                 <div className="logo">
-                    <img src={Logobot} alt="Socialit" />
+                    <img src={logoFoot} alt="Colorfast" />
                 </div>
             </div>
             <div className="wrapper-hf">
@@ -19,7 +19,7 @@ const Footer = () => (
                     <p className="nbsp">Бесплатный звонок по России </p>
                 </div>
             </div>
-            <p>© {new Date().getFullYear()} ООО «Socialit». Все права защищены.</p>
+            <p>© ООО «Colorfast» {new Date().getFullYear()}. Все права защищены.</p>
         </div>
     </footer>
 );
