@@ -63,7 +63,6 @@ export default props => {
               contentComponent={HTMLContent}
               description={post.frontmatter.description}
               helmet={<Helmet title={`Работы | ${post.frontmatter.title}`} />}
-              tag={post.frontmatter.tag}
               title={post.frontmatter.title}
               date={post.frontmatter.date}
               image={post.frontmatter.image}
@@ -84,7 +83,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "DD.MM.YYYY")
-        tag
         title
         description
         image

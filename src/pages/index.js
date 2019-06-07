@@ -71,7 +71,7 @@ export default class IndexPage extends React.Component {
                     <div className="container-fluid">
                         {posts
                             .filter(post => post.node.frontmatter.templateKey === 'project-post')
-                            .filter(post => ['всё', post.node.frontmatter.tags].includes(this.state.tag))
+                            .filter(post => [...post.node.frontmatter.tags].includes(this.state.tag))
                             .map(({ node: post }) => (
                                 <Link key={post.id} to={post.fields.slug} className='project-link'>
                                     <img src={post.frontmatter.imageInList} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
