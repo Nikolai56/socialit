@@ -14,13 +14,13 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="Главная | COLORFAST design" />
     <Header />
     <Navbar />
-    {children()}
+    {children}
     <Footer />
   </div>
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 };
 
 export default TemplateWrapper;

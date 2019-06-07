@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 
 export const ServicesPageTemplate = ({ title, content, contentComponent, services }) => {

@@ -1,5 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import Layout from '../layouts'
 import Content, { HTMLContent } from '../components/Content'
 import Seo from '../components/Seo'
 
@@ -55,21 +57,23 @@ export default props => {
   const { markdownRemark: post } = props.data;
 
   return (
-    <ProjectPostTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`Работы | ${post.frontmatter.title}`} />}
-      tag={post.frontmatter.tag}
-      title={post.frontmatter.title}
-      date={post.frontmatter.date}
-      image={post.frontmatter.image}
-      authors={post.frontmatter.authors}
-      // cover={post.frontmatter.cover}
-      // meta_title={post.frontmatter.meta_title}
-      // meta_desc={post.frontmatter.meta_description}
-      // slug={post.fields.slug}
-    />
+      <Layout>
+          <ProjectPostTemplate
+              content={post.html}
+              contentComponent={HTMLContent}
+              description={post.frontmatter.description}
+              helmet={<Helmet title={`Работы | ${post.frontmatter.title}`} />}
+              tag={post.frontmatter.tag}
+              title={post.frontmatter.title}
+              date={post.frontmatter.date}
+              image={post.frontmatter.image}
+              authors={post.frontmatter.authors}
+              // cover={post.frontmatter.cover}
+              // meta_title={post.frontmatter.meta_title}
+              // meta_desc={post.frontmatter.meta_description}
+              // slug={post.fields.slug}
+          />
+      </Layout>
   )
 }
 

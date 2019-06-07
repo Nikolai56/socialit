@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'gatsby';
 import Modal from './Modal';
 import { Collapse } from 'react-collapse';
 
@@ -32,24 +32,24 @@ class Navbar extends React.Component {
                         <span style={{marginLeft: 8}}>Меню</span>
                     </div>
                     <ul className="menu_list">
-                        {/*<li><Link exact activeClassName="active" to="/">Главная</Link></li>*/}
-                        {/*<li><Link exact activeClassName="active" to="/about/">Новости</Link></li>*/}
-                        <li><NavLink onClick={this.handleCloseMenu} exact activeClassName="active"
-                                     to="/services/">Услуги</NavLink></li>
-                        <li><NavLink onClick={this.handleCloseMenu} exact activeClassName="active" to="/">Работы</NavLink>
+                        {/*<li><Link activeClassName="active" to="/">Главная</Link></li>*/}
+                        {/*<li><Link activeClassName="active" to="/about/">Новости</Link></li>*/}
+                        <li><Link onClick={this.handleCloseMenu} activeClassName="active"
+                                     to="/services/">Услуги</Link></li>
+                        <li><Link onClick={this.handleCloseMenu} activeClassName="active" to="/">Работы</Link>
                         </li>
-                        <li><NavLink onClick={this.handleCloseMenu} exact activeClassName="active"
-                                     to="/contacts/">Контакты</NavLink></li>
-                        {/*<li><Link exact activeClassName="active" to="/products/">Контакты</Link></li>*/}
+                        <li><Link onClick={this.handleCloseMenu} activeClassName="active"
+                                     to="/contacts/">Контакты</Link></li>
+                        {/*<li><Link activeClassName="active" to="/products/">Контакты</Link></li>*/}
                     </ul>
                     <Collapse isOpened={this.state.isMenuOpen}>
                         <ul className="menu_list menu_list-mobile">
-                            <li><NavLink onClick={this.handleCloseMenu} exact activeClassName="active"
-                                         to="/services/">Услуги</NavLink></li>
-                            <li><NavLink onClick={this.handleCloseMenu} exact activeClassName="active"
-                                         to="/">Работы</NavLink></li>
-                            <li><NavLink onClick={this.handleCloseMenu} exact activeClassName="active"
-                                         to="/contacts/">Контакты</NavLink></li>
+                            <li><Link onClick={this.handleCloseMenu} activeClassName="active"
+                                         to="/services/">Услуги</Link></li>
+                            <li><Link onClick={this.handleCloseMenu} activeClassName="active"
+                                         to="/">Работы</Link></li>
+                            <li><Link onClick={this.handleCloseMenu} activeClassName="active"
+                                         to="/contacts/">Контакты</Link></li>
                         </ul>
                     </Collapse>
                 </div>

@@ -1,16 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'gatsby';
 import logo from '../img/logo.svg';
 
 const Header = () => (
     <header>
         <div className="container">
             <div className="col-md-3">
-                <NavLink to="/">
+                <Link to="/">
                     <div className="logo">
                         <img src={logo} alt="Colorfast design" />
                     </div>
-                </NavLink>
+                </Link>
             </div>
             <div className="wrapper-hf">
                 <div className="col-md-3">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { graphql, Link } from 'gatsby';
 import { Collapse } from 'react-collapse';
 
 export default class IndexPage extends React.Component {
@@ -72,10 +72,10 @@ export default class IndexPage extends React.Component {
                             .filter(post => post.node.frontmatter.templateKey === 'project-post')
                             .filter(post => ['всё', post.node.frontmatter.tags].includes(this.state.tag))
                             .map(({ node: post }) => (
-                                <NavLink key={post.id} to={post.fields.slug} className='project-link'>
+                                <Link key={post.id} to={post.fields.slug} className='project-link'>
                                     <img src={post.frontmatter.imageInList} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
                                     {/*<p>{post.excerpt}</p>*/}
-                                </NavLink>
+                                </Link>
                             ))}
                     </div>
                 </section>
