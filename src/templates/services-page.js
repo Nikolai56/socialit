@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../layouts'
 import Content, { HTMLContent } from '../components/Content'
 
 export const ServicesPageTemplate = ({ title, content, contentComponent, services }) => {
@@ -27,12 +28,14 @@ export default ({ data }) => {
     const { frontmatter, html } = data.markdownRemark
 
     return (
-        <ServicesPageTemplate
-            contentComponent={HTMLContent}
-            title={frontmatter.title}
-            services={frontmatter.services}
-            content={html}
-        />
+        <Layout>
+            <ServicesPageTemplate
+                contentComponent={HTMLContent}
+                title={frontmatter.title}
+                services={frontmatter.services}
+                content={html}
+            />
+        </Layout>
     )
 }
 

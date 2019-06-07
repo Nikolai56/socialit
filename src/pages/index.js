@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Collapse } from 'react-collapse';
+import Layout from '../layouts';
 
 export default class IndexPage extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ export default class IndexPage extends React.Component {
         const { edges: posts } = data.allMarkdownRemark;
 
         return (
-            <div>
+            <Layout>
                 <nav className="nav2">
                     <div className="container">
                         <h1 className="text-center">Работы по категориям:</h1>
@@ -79,7 +80,7 @@ export default class IndexPage extends React.Component {
                             ))}
                     </div>
                 </section>
-            </div>
+            </Layout>
         )
     }
 }

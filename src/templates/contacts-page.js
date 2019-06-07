@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
+import Layout from '../layouts'
 import Content, { HTMLContent } from '../components/Content';
 
 const mapState = { center: [55.675118, 37.584362], zoom: 14 };
@@ -56,11 +57,13 @@ export default ({ data }) => {
     const { frontmatter, html } = data.markdownRemark
 
     return (
-        <ContactsPageTemplate
-            contentComponent={HTMLContent}
-            title={frontmatter.title}
-            content={html}
-        />
+        <Layout>
+            <ContactsPageTemplate
+                contentComponent={HTMLContent}
+                title={frontmatter.title}
+                content={html}
+            />
+        </Layout>
     )
 }
 

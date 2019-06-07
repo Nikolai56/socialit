@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import Layout from '../layouts'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
@@ -34,13 +35,15 @@ export default props => {
   const { markdownRemark: post } = props.data
 
   return (
-    <BlogPostTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-      title={post.frontmatter.title}
-    />
+      <Layout>
+        <BlogPostTemplate
+            content={post.html}
+            contentComponent={HTMLContent}
+            description={post.frontmatter.description}
+            helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+            title={post.frontmatter.title}
+        />
+      </Layout>
   )
 }
 
