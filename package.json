@@ -3,6 +3,7 @@
   "description": "Gatsby, and Netlify CMS project for Colorfast design",
   "version": "1.1.0",
   "author": "Nikolai",
+  "homepage": "https://nikolai56.github.io/socialit",
   "dependencies": {
     "gatsby": "^2.8.5",
     "gatsby-plugin-netlify-cms": "^4.0.1",
@@ -36,9 +37,12 @@
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "prettier": "^1.7.4"
   }
 }
