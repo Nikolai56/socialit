@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
   },
+  pathPrefix: "/socialit",
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
