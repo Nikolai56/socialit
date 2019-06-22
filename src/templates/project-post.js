@@ -33,10 +33,8 @@ export const ProjectPostTemplate = ({
                     <p>{description} <span className="tr">{date}</span></p>
                 </div>
             </div>
-            {image ? <div className="handbg">
-                <img src={image} alt={title} />
-            </div> : null}
             <div className="container">
+                {image ? <img className="project__img" src={image} alt={title} /> : null}
                 <PostContent content={content}/>
             </div>
             {authors ? <div className="grey">

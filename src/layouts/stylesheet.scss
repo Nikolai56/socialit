@@ -127,8 +127,7 @@ h1 {
 /*----------------header----------------*/
 
 header {
-  border-bottom: 1px solid #acacac;
-  margin: 30px 0 10px;
+  margin: 30px 0 0;
 }
 
 header .container >.col-md-3,
@@ -146,10 +145,6 @@ footer .container >.col-md-3 {
   width: 50%;
   display: inline-block;
   padding: 5px 0 16px;
-}
-
-.wrapper-hf .col-md-3:first-child {
-  border-right: 1px solid #acacac;
 }
 
 .wrapper-hf .col-md-3:last-child {
@@ -259,10 +254,6 @@ footer {
 footer p,
 footer .phone {
   color: #fff;
-}
-
-footer .wrapper-hf .col-md-3:first-child {
-  border-right: 1px solid #fff;
 }
 
 footer .container > p {
@@ -533,24 +524,6 @@ main h2 {
   float: right;
 }
 
-.handbg {
-  background: url(./img/handbg.jpg)no-repeat center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  text-align: center;
-}
-
-.handbg img {
-  margin: 70px 0;
-}
-
-.project .container img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 130px;
-}
-
 //.project > .container > p {
 //    margin: 40px 0 60px;
 //    line-height: 25px;
@@ -564,10 +537,21 @@ main h2 {
     text-transform: none;
     font-weight: normal;
   }
-  >.container {
+  &>.container {
     p {
       margin: 40px 0 60px;
       line-height: 25px;
+    }
+  }
+  .container {
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 130px;
+    }
+    .project__img {
+      display: block;
+      margin: 70px auto;
     }
   }
 }
