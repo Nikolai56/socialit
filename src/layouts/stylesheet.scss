@@ -431,9 +431,21 @@ footer .container > p {
   font-size: 0;
 }
 
-.portfolio img {
+.project-link {
+  color: #363f47;
+  display: inline-block;
+  vertical-align: top;
   margin: 3px;
   width: 23.7%;
+
+  p {
+    font-size: 1.3rem;
+    margin: 3px;
+  }
+}
+
+.portfolio img {
+  width: 100%;
 }
 
 .portfolio img:hover {

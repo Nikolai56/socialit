@@ -75,7 +75,7 @@ export default class IndexPage extends React.Component {
                             .map(({ node: post }) => (
                                 <Link key={post.id} to={post.fields.slug} className='project-link'>
                                     <img src={post.frontmatter.imageInList} alt={`${post.frontmatter.title} | ${post.frontmatter.date}`} />
-                                    {/*<p>{post.excerpt}</p>*/}
+                                    <p>{post.frontmatter.title}</p>
                                 </Link>
                             ))}
                     </div>
