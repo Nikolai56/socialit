@@ -39,7 +39,7 @@
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -r https://github.com/Nikolai56/socialit"
+    "deploy": "git remote add origin https://github.com/Nikolai56/socialit && gatsby build && gh-pages -d public"
   },
   "devDependencies": {
     "prettier": "^1.7.4"
