@@ -1,6 +1,9 @@
-name: Update blog
+name: Deploy to Github Pages
 
-on: [push, repository_dispatch]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   update:
