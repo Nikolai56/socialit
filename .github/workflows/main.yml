@@ -1,26 +1,35 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - master
+name: Update blog
+
+on: [push, repository_dispatch]
+
 jobs:
-  build-and-deploy:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
+      - uses: actions/checkout@v1
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm install
-          npm run build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Set Node.js
+        uses: actions/setup-node@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          node-version: 10.x
+
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+
+      - name: Lint
+        run: yarn run lint
+
+      - name: Build
+        run: yarn run build
+        env:
+          GHOST_API_URL: "https://ghost.nehalist.io"
+          GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
+          GATSBY_ENV: "prod"
+          GATSBY_CARRAWAY_URL: "https://carraway.nehalist.io"
+          GATSBY_COMMENTO_URL: "http://comments.nehalist.io"
+          GA_TRACKING_ID: "UA-40873708-1"
+
+      - name: Deploy
+        run: docker-compose run deploy
+        env:
+          DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
