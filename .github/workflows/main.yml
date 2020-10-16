@@ -18,8 +18,11 @@ jobs:
 
       - name: Build
         run: yarn run build
-
-      - name: Deploy
-        run: docker-compose run deploy
-        env:
-          DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
